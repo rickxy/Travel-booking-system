@@ -48,6 +48,11 @@ def contact(request):
 
         }
         return render(request, "contact.html", context)
+def test(request):
+        context ={
+
+        }
+        return render(request, "test.html", context)
 
 def ticket(request):
           form= CreateUserForm( )  
@@ -58,9 +63,8 @@ def ticket(request):
                         form.save()
           context ={'form':form}
           return render(request, "ticket.html", context)
-def test(request):
-        context ={
-
-        }
-        return render(request, "test.html", context)
+def logoutUser(request):
+    logout(request)
+    return redirect('loginPage')
+       
 
