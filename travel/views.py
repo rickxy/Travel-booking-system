@@ -58,3 +58,9 @@ def ticket(request):
                         form.save()
           context ={'form':form}
           return render(request, "ticket.html", context)
+def test(request):
+        context ={
+
+        }
+        return render(request, "test.html", context)
+
