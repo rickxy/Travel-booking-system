@@ -1,0 +1,600 @@
+
+{% extends 'base_header.html' %}
+
+{% block page_title %}
+   Home of travel booking
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+    <section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+             
+              <div class="col-md-5">
+                    <div class="left-side">
+                        <div class="logo">
+                            <img src="{% static "img/logo.png" %}" alt="Flight Template">
+                        </div>
+                    
+                        <div class="tabs-content">
+
+                            <h4>welcome to Airline travel agents</h4>
+                            <ul class="social-links">
+                                <li><a href="http://facebook.com">Find us on <em>Facebook</em><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="http://youtube.com">Our <em>YouTube</em> Channel<i class="fa fa-youtube"></i></a></li>
+                                <li><a href="http://instagram.com">Follow our <em>instagram</em><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="{% url 'ticket' %}">click to <em>Book a flight</em><i class="fa fa-fighter-jet"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="page-direction-button">
+                            <a href="{% url 'contact' %}"><i class="fa fa-phone"></i>Contact Us Now</a>
+                        </div>
+                    </div>
+                </div>
+               
+  <div class="col-md-7">
+  <div class="right-side">
+
+     </div>
+        </div>
+            </div>
+        </div>
+         <div class="col-md-45">
+              <div class="right-side">
+                    <button><a  href="{% url 'logout' %}">LogOut</a></button>
+             </div>
+        </div> 
+    </section>
+
+   
+
+    <div class="tabs-content" id="weather">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Check Weather For 5 NEXT Days</h2>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="col-md-12">
+                        <div class="weather-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="tabs clearfix" data-tabgroup="second-tab-group">
+                                        <li><a href="#monday" class="active">Monday</a></li>
+                                        <li><a href="#tuesday">Tuesday</a></li>
+                                        <li><a href="#wednesday">Wednesday</a></li>
+                                        <li><a href="#thursday">Thursday</a></li>
+                                        <li><a href="#friday">Friday</a></li>
+                                    </ul>    
+                                </div>
+                                <div class="col-md-12">
+                                    <section id="second-tab-group" class="weathergroup">
+                                        <div id="monday">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Myanmar</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-03.png" %}" alt="">
+                                                        </div>
+                                                        <span>32&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>26&deg;</span></li>
+                                                            <li>12PM <span>32&deg;</span></li>
+                                                            <li>6PM <span>28&deg;</span></li>
+                                                            <li>12AM <span>22&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Thailand</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-02.png" %}" alt="">
+                                                        </div>
+                                                        <span>28&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>20&deg;</span></li>
+                                                            <li>12PM <span>28&deg;</span></li>
+                                                            <li>6PM <span>26&deg;</span></li>
+                                                            <li>12AM <span>18&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>India</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-01.png" %}" alt="">
+                                                        </div>
+                                                        <span>33&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>26&deg;</span></li>
+                                                            <li>12PM <span>33&deg;</span></li>
+                                                            <li>6PM <span>29&deg;</span></li>
+                                                            <li>12AM <span>27&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tuesday">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Myanmar</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-02.png" %}" alt="">
+                                                        </div>
+                                                        <span>28&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>18&deg;</span></li>
+                                                            <li>12PM <span>27&deg;</span></li>
+                                                            <li>6PM <span>25&deg;</span></li>
+                                                            <li>12AM <span>17&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Thailand</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-03.png" %}" alt="">
+                                                        </div>
+                                                        <span>31&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>19&deg;</span></li>
+                                                            <li>12PM <span>28&deg;</span></li>
+                                                            <li>6PM <span>22&deg;</span></li>
+                                                            <li>12AM <span>18&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>India</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-01.png" %}" alt="">
+                                                        </div>
+                                                        <span>26&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>19&deg;</span></li>
+                                                            <li>12PM <span>26&deg;</span></li>
+                                                            <li>6PM <span>22&deg;</span></li>
+                                                            <li>12AM <span>20&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="wednesday">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Myanmar</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-03.png" %}" alt="">
+                                                        </div>
+                                                        <span>31&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>19&deg;</span></li>
+                                                            <li>12PM <span>28&deg;</span></li>
+                                                            <li>6PM <span>22&deg;</span></li>
+                                                            <li>12AM <span>18&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Thailand</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-01.png" %}" alt="">
+                                                        </div>
+                                                        <span>34&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>28&deg;</span></li>
+                                                            <li>12PM <span>34&deg;</span></li>
+                                                            <li>6PM <span>30&deg;</span></li>
+                                                            <li>12AM <span>29&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>India</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-02.png" %}" alt="">
+                                                        </div>
+                                                        <span>28&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>18&deg;</span></li>
+                                                            <li>12PM <span>27&deg;</span></li>
+                                                            <li>6PM <span>25&deg;</span></li>
+                                                            <li>12AM <span>17&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="thursday">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Myanmar</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-01.png" %}" alt="">
+                                                        </div>
+                                                        <span>27&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>21&deg;</span></li>
+                                                            <li>12PM <span>27&deg;</span></li>
+                                                            <li>6PM <span>22&deg;</span></li>
+                                                            <li>12AM <span>18&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Thailand</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-02.png" %}" alt="">
+                                                        </div>
+                                                        <span>28&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>18&deg;</span></li>
+                                                            <li>12PM <span>27&deg;</span></li>
+                                                            <li>6PM <span>25&deg;</span></li>
+                                                            <li>12AM <span>17&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>India</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-03.png" %}" alt="">
+                                                        </div>
+                                                        <span>31&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>19&deg;</span></li>
+                                                            <li>12PM <span>28&deg;</span></li>
+                                                            <li>6PM <span>22&deg;</span></li>
+                                                            <li>12AM <span>18&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="friday">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Myanmar</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-03.png" %}" alt="">
+                                                        </div>
+                                                        <span>33&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>28&deg;</span></li>
+                                                            <li>12PM <span>33&deg;</span></li>
+                                                            <li>6PM <span>29&deg;</span></li>
+                                                            <li>12AM <span>27&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>Thailand</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-02.png" %}" alt="">
+                                                        </div>
+                                                        <span>31&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>24&deg;</span></li>
+                                                            <li>12PM <span>31&deg;</span></li>
+                                                            <li>6PM <span>26&deg;</span></li>
+                                                            <li>12AM <span>23&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="weather-item">
+                                                        <h6>India</h6>
+                                                        <div class="weather-icon">
+                                                            <img src="{% static "img/weather-icon-01.png" %}" alt="">
+                                                        </div>
+                                                        <span>28&deg;C</span>
+                                                        <ul class="time-weather">
+                                                            <li>6AM <span>24&deg;</span></li>
+                                                            <li>12PM <span>28&deg;</span></li>
+                                                            <li>6PM <span>26&deg;</span></li>
+                                                            <li>12AM <span>22&deg;</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-item first-service">
+                        <div class="service-icon"></div>
+                        <h4>Easy Tooplate</h4>
+                        <p>Happiness is not a possession to be prized, it is a quality of thought, a state of mind. - Daphne du Maurier</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item second-service">
+                        <div class="service-icon"></div>
+                        <h4>Unique Ideas</h4>
+                        <p>Travelling far and long in airplanes is never easy; lots of preparations have to be done by the travelers as well as the airplane's staff. When you finally sit in your plane after all the security checks and fatigue, there is still the flight attendants' instructions that you have to follow.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item third-service">
+                        <div class="service-icon"></div>
+                        <h4>Best Support</h4>
+                        <p>Sometimes I wonder, jokes apart, doesn't it actually wreck the plane's insides when it lands so roughly? </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <div class="tabs-content" id="recommended-hotel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Recommended Hotel For You</h2>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="col-md-4">
+                            <ul class="tabs clearfix" data-tabgroup="third-tab-group">
+                                <li><a href="#livingroom" class="active">Living Room <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#suitroom">Suit Room <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#swimingpool">Swiming Pool <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#massage">Massage Service <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#fitness">Fitness Life <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#event">Evening Event <i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <section id="third-tab-group" class="recommendedgroup">
+                            <div id="livingroom">
+                                <div class="text-content">
+                                    <iframe width="100%" height="400px" src="www.youtube.com">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div id="suitroom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="owl-suiteroom" class="owl-carousel owl-theme">
+                                            <div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img src="{% static "img/suite-02.jpg" %}" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Clean And Relaxing Room</h4>
+                                                        <span>Aurora Resort</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img src="{% static "img/suite-01.jpg" %}" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Special Suite Room TV</h4>
+                                                        <span>Khao Yai Hotel</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img src="{% static "img/suite-03.jpg" %}" alt="">
+                                                    <div class="text-content">
+                                                        <h4>The Best Sitting</h4>
+                                                        <span>Hotel Grand</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="swimingpool">
+                                <img src= "{% static "img/swiming-pool.jpg" %}" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Lovely View Swiming Pool For Special Guests</h4>
+                                            <span>Victoria Resort and Spa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="massage">
+                                <img src="{% static "img/massage-service.jpg" %}" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Perfect Place For Relaxation</h4>
+                                            <span>Napali Beach</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fitness">
+                                <img src="{% static "img/fitness-service.jpg" %}" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Insane Street Workout</h4>
+                                            <span>Hua Hin Beach</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="event">
+    
+                                  <img src="{% static "img/evening-event.jpg" %}" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Finest Winery Night</h4>
+                                            <span>Queen Restaurant</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section id="most-visited">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Most Visited Places</h2>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div id="owl-mostvisited" class="owl-carousel owl-theme">
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                        
+                                   <img src="{% static "img/place-01.jpg" %}" alt="">
+                                
+                                <div class="text-content">
+                                    <h4>River Views</h4>
+                                    <span>New York</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-02.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Thank you very much</h4>
+                                    <span>Tokyo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-03.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Plastic</h4>
+                                    <span>Paris</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-04.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Admin</h4>
+                                    <span>Hollywood</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-02.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>live poverty</h4>
+                                    <span>Tokyo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-01.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Aliquam elit metus</h4>
+                                    <span>New York</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-03.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Phasellus quiver</h4>
+                                    <span>Paris</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-04.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Into what is completed</h4>
+                                    <span>Hollywood</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-01.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>But the throat hates</h4>
+                                    <span>NEW YORK</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+
+                                 <img src="{% static "img/place-02.jpg" %}" alt="">
+                                <div class="text-content">
+                                    <h4>Donec varius porttitor</h4>
+                                    <span>Tokyo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock main_content %}

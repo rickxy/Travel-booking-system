@@ -32,7 +32,7 @@ def loginPage(request):
                user= authenticate(request, username=username, password=password)
                if user is not None:
                        login(request, user)
-                       return redirect('index')
+                       return redirect('home')
         context ={}
         return render(request, "login.html", context)
         
@@ -41,6 +41,11 @@ def index(request):
 
         }
         return render(request, "index.html", context)
+def home(request):
+        context ={
+
+        }
+        return render(request, "home.html", context)
 
 
 def contact(request):
@@ -65,6 +70,6 @@ def ticket(request):
           return render(request, "ticket.html", context)
 def logoutUser(request):
     logout(request)
-    return redirect('loginPage')
+    return redirect('index')
        
 
